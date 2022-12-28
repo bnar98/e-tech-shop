@@ -46,13 +46,6 @@ export const categoryEditChange = (name, value) => {
   };
 };
 
-export const categorySelect = value => {
-  return {
-    type: CATEGORY_SELECT,
-    payload: value
-  };
-};
-
 export const resetCategory = () => {
   return async (dispatch, getState) => {
     dispatch({ type: RESET_CATEGORY });

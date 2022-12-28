@@ -75,7 +75,6 @@ const rating = v => {
     case 20:
       return 4;
     default:
-      0;
       return 5;
   }
 };

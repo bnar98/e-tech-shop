@@ -5,6 +5,9 @@
  */
 
 import { bindActionCreators } from 'redux';
+import axios from 'axios';
+
+import { BASE_API_URL } from "./constants/index"
 
 import * as application from './containers/Application/actions';
 import * as authentication from './containers/Authentication/actions';
@@ -32,6 +35,9 @@ import * as review from './containers/Review/actions';
 import * as wishlist from './containers/WishList/actions';
 
 export default function mapDispatchToProps(dispatch) {
+
+  axios.defaults.baseURL = BASE_API_URL;
+
   return bindActionCreators(
     {
       ...application,

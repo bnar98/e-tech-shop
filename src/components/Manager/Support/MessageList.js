@@ -11,9 +11,9 @@ const MessagesList = (props) => {
   const emptyMsgs = msgsLength > 0 ? false : true;
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({
-      behavior: "smooth",
-    });
+    // messagesEndRef.current?.scrollIntoView({
+    //   behavior: "smooth",
+    // });
   };
 
   useEffect(() => {

@@ -230,7 +230,6 @@ export const getProductReviewsSummary = (reviews) => {
 
           break;
         default:
-          0;
           break;
       }
     });
