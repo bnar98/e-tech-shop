@@ -43,52 +43,27 @@ const Footer = () => {
         <div className='footer-content'>
           <div className='footer-block'>
             <div className='block-title'>
-              <h3 className='text-uppercase'>Customer Service</h3>
+              <h3 className='text-uppercase'>Contact Us</h3>
             </div>
             <div className='block-content'>
-              <ul>{footerLinks}</ul>
+              <ul>
+                <li>+964 750 123 22 55</li>
+                <li>etouch@gmail.com</li>
+              </ul>
             </div>
           </div>
-          <div className='footer-block'>
+          <div className='footer-block footer-end'>
             <div className='block-title'>
-              <h3 className='text-uppercase'>Links</h3>
+              <h3 className='text-uppercase'>Sell With Us</h3>
             </div>
             <div className='block-content'>
-              <ul>{footerLinks}</ul>
+              <ul><li>Fill Request Form</li></ul>
             </div>
           </div>
-          <div className='footer-block'>
-            <div className='block-title'>
-              <h3 className='text-uppercase'>Newsletter</h3>
-              <Newsletter />
-            </div>
-          </div>
+
         </div>
-        <div className='footer-copyright'>
-          <span>© {new Date().getFullYear()} MERN Store</span>
-        </div>
-        <ul className='footer-social-item'>
-          <li>
-            <a href='/#facebook' rel='noreferrer noopener' target='_blank'>
-              <span className='facebook-icon' />
-            </a>
-          </li>
-          <li>
-            <a href='/#instagram' rel='noreferrer noopener' target='_blank'>
-              <span className='instagram-icon' />
-            </a>
-          </li>
-          <li>
-            <a href='/#pinterest' rel='noreferrer noopener' target='_blank'>
-              <span className='pinterest-icon' />
-            </a>
-          </li>
-          <li>
-            <a href='/#twitter' rel='noreferrer noopener' target='_blank'>
-              <span className='twitter-icon' />
-            </a>
-          </li>
-        </ul>
+
+
       </Container>
     </footer>
   );

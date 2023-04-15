@@ -81,11 +81,10 @@ class Navigation extends React.PureComponent {
         <div className='d-flex'>
           <img
             className='item-image'
-            src={`${
-              suggestion.imageUrl
-                ? suggestion.imageUrl
-                : '/images/placeholder-image.png'
-            }`}
+            src={`${suggestion.imageUrl
+              ? suggestion.imageUrl
+              : '/images/placeholder-image.png'
+              }`}
           />
           <div>
             <Container>
@@ -137,7 +136,7 @@ class Navigation extends React.PureComponent {
 
     return (
       <header className='header fixed-mobile-header'>
-        <div className='header-info'>
+        {/* <div className='header-info'>
           <Container>
             <Row>
               <Col md='4' className='text-center d-none d-md-block'>
@@ -158,7 +157,7 @@ class Navigation extends React.PureComponent {
               </Col>
             </Row>
           </Container>
-        </div>
+        </div> */}
         <Container>
           <Row className='align-items-center top-header'>
             <Col
@@ -180,7 +179,11 @@ class Navigation extends React.PureComponent {
                   />
                 )}
                 <Link to='/'>
-                  <h1 className='logo'>MERN Store</h1>
+                  <div className='navigationBrand'>
+
+                    <img src='/images/fingerPrint.png' />
+                    <h1 className='logo'>E-TOUCH</h1>
+                  </div>
                 </Link>
               </div>
             </Col>
@@ -226,43 +229,19 @@ class Navigation extends React.PureComponent {
               sm={{ size: 12, order: 2 }}
               md={{ size: 9, order: 1 }}
               lg={{ size: 4, order: 3 }}
-              // className='px-0'
+            // className='px-0'
             >
               <Navbar color='light' light expand='md' className='mt-1 mt-md-0'>
-                <CartIcon
-                  className='d-none d-md-block'
-                  cartItems={cartItems}
-                  onClick={toggleCart}
-                />
+
                 <Nav navbar>
-                  {brands && brands.length > 0 && (
-                    <Dropdown
-                      nav
-                      inNavbar
-                      toggle={() => this.toggleBrand()}
-                      isOpen={isBrandOpen}
-                    >
-                      <DropdownToggle nav>
-                        Brands
-                        <span className='fa fa-chevron-down dropdown-caret'></span>
-                      </DropdownToggle>
-                      <DropdownMenu right className='nav-brand-dropdown'>
-                        <div className='mini-brand'>
-                          <MiniBrand
-                            brands={brands}
-                            toggleBrand={() => this.toggleBrand()}
-                          />
-                        </div>
-                      </DropdownMenu>
-                    </Dropdown>
-                  )}
+
                   <NavItem>
                     <NavLink
                       tag={ActiveLink}
                       to='/shop'
                       activeClassName='active'
                     >
-                      Shop
+                      Shopping
                     </NavLink>
                   </NavItem>
                   {authenticated ? (
@@ -281,20 +260,11 @@ class Navigation extends React.PureComponent {
                       </DropdownMenu>
                     </UncontrolledDropdown>
                   ) : (
-                    <UncontrolledDropdown nav inNavbar>
-                      <DropdownToggle nav>
-                        Welcome!
-                        <span className='fa fa-chevron-down dropdown-caret'></span>
-                      </DropdownToggle>
-                      <DropdownMenu right>
-                        <DropdownItem onClick={() => history.push('/login')}>
-                          Login
-                        </DropdownItem>
-                        <DropdownItem onClick={() => history.push('/register')}>
-                          Sign Up
-                        </DropdownItem>
-                      </DropdownMenu>
-                    </UncontrolledDropdown>
+                    <div >
+
+                      <img src='/icons/cart.png' />
+                      <img src='/icons/heart.png' />
+                    </div>
                   )}
                 </Nav>
               </Navbar>
